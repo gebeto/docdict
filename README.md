@@ -1,4 +1,4 @@
-# docs_page
+# docdict
 Generate docs page from docstring
 
 
