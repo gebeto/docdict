@@ -57,3 +57,38 @@ class DocString2Json(object):
         res = re.findall(r"@param ([\w\W]+?)\n", self.raw)
         return res if res else []
 
+
+
+class DocString2Json2(object):
+    def __init__(self, raw_docstring):
+        self.raw = raw_docstring
+        self.raw_rows = [r.strip() for r in self.raw.split("\n")]
+        self.rows = [r for r in self.raw_rows if r and r[0] == "@"]
+        self.items = self.get_items()
+        self.keys = self.items[0]
+        self.values = self.items[1]
+
+    def get_items(self):
+        return ([], [])
+        # keys = []
+        # values = []
+        # for row in self.rows:
+        #     splitted = row.strip().split(" ")
+        #     key = splitted[0]
+        #     value = " ".join(splitted[1:])
+        #     keys.append(key[1:])
+        #     values.append(value)
+        # return (keys, values)
+
+    # def __iter__(self):
+    #     yield ("a", "b")
+    #     yield ("a", "b")
+
+    def __iter__(self):
+        yield 1
+        yield 2
+
+
+
+# print dict()
+# print d.__dict__
