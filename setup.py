@@ -5,13 +5,13 @@ with open("README.md", "r") as fh:
 
 install_requires = []
 
-test_requires = [
+tests_require = [
     "pytest",
 ]
 
 setuptools.setup(
     name="docdict",
-    version="0.0.1",
+    version="0.0.2",
     author="Slavik Nychkalo",
     author_email="slavik.nychkalo@gmail.com",
     description="Generate dict by docstrings",
